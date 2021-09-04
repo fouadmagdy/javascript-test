@@ -1,30 +1,40 @@
 import { pipe, always, applySpec } from 'ramda';
+import R from 'ramda'
 
 const getValue = (o, sortKey) => sortKey ? o[sortKey] : o
 
 const sort = (list, sortKey) => {
   // SHOULD IMPLEMENT
-  return list;
+  const diff = function (a, b) { return a - b; }
+  return R.sort(diff, list)
 };
 
 const findIndex = (list, sortKey) => value => {
   // SHOULD IMPLEMENT
-  return -1;
+  let item
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] == value) {
+      item = list[i]
+      break
+    }
+  }
+  return item - 1;
 }
 
 
 const insert = (list, sortKey, item) => {
   // SHOULD IMPLEMENT a preserving order insertion
-  return list;
+  return R.insert(sortKey, item, list);
 }
 
 
 const remove = (list, sortKey, value) => {
   // SHOULD IMPLEMENT
-  return list;
+
+  return R.without([value], list)
 }
 
-export const List = ({ sortKey, initial, initialOrder}) => {
+export const List = ({ sortKey, initial, initialOrder }) => {
   const items = initialOrder ? initial : sort(initial, sortKey);
 
   return {

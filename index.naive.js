@@ -22,7 +22,7 @@ const remove = (list, sortKey, value) => {
   return list.filter(i => getValue(i) !== value);
 }
 
-export const List = ({ sortKey, initial, initialOrder}) => {
+export const List = ({ sortKey, initial, initialOrder }) => {
   const items = initialOrder ? initial : sort(initial, sortKey);
 
   return {

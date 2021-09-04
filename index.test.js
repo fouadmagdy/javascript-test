@@ -26,7 +26,7 @@ describe('List', () => {
   })
 
   it('should insert b into list a', () => {
-    const list = List({ initial: [1, 2, 3, 4], initialOrder: true  })
+    const list = List({ initial: [1, 2, 3, 4], initialOrder: true })
     const expected = [1, 2, 3, 4, 5];
     const actual = list.insert(5).items
 
@@ -34,7 +34,7 @@ describe('List', () => {
   })
 
   it('should remove b from list a', () => {
-    const list = List({ initial: [1, 2, 3, 4], initialOrder: true  })
+    const list = List({ initial: [1, 2, 3, 4], initialOrder: true })
     const expected = [1, 2, 3];
     const actual = list.remove(4).items
 
@@ -42,7 +42,7 @@ describe('List', () => {
   })
 
   it('should findIndex of b at list a', () => {
-    const list = List({ initial: [1, 2, 3, 4], initialOrder: true  })
+    const list = List({ initial: [1, 2, 3, 4], initialOrder: true })
     const expected = 2;
     const actual = list.findIndex(3)
 

@@ -4,9 +4,6 @@
   "description": "",
   "type": "module",
   "main": "index.js",
-  "engines": {
-    "node": ">=16"
-  },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "benchmark": "NODE_OPTIONS=--experimental-vm-modules node benchmark.js"
